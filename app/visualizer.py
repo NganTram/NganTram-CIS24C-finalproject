@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import base64
@@ -11,7 +13,25 @@ def create_plot(x, y, title):
     plt.ylabel('y')
     plt.grid(True)
 
-    # Save plot to a BytesIO object
+    ax = plt.gca()  
+    ticks = np.arange(-2 * np.pi, 2.5 * np.pi, np.pi/2)
+
+    tick_labels = []
+    for tick in ticks:
+        if tick == 0:
+            tick_labels.append("0")
+        elif tick / np.pi == 1:
+            tick_labels.append("$\pi$")
+        elif tick / np.pi == -1:
+            tick_labels.append("$-\pi$")
+        elif tick / np.pi > 0:
+            tick_labels.append(f"${{{int(tick / np.pi)}}}\pi$")
+        else:
+            tick_labels.append(f"$-{{{int(abs(tick / np.pi))}}}\pi$")
+    
+    ax.set_xticks(ticks)
+    ax.set_xticklabels(tick_labels)
+
     buf = BytesIO()
     plt.savefig(buf, format='png', bbox_inches='tight')
     buf.seek(0)
