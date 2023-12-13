@@ -3,14 +3,14 @@
 #Trigonometry Function Visualizer
 
 Overview
-The Trigonometry Function Visualizer is a Flask-based web application designed to graph trigonometric functions and their inverses. It provides users with functionality to find the domain and range of these functions, identify vertical asymptotes for tangent and cotangent functions, and determine horizontal asymptotes for their inverses, along with the end behaviors for each function.
+The Trigonometry Function Visualizer is a Flask-based web application designed to graph trigonometric functions and their inverses. It provides users domain and range of these functions,  and asymptotes of tangent and cotangent functions.
 
 Features
 
-- Graphing trigonometric functions: sine, cosine, tangent, and cotangent.
-- Plotting inverses of trigonometric functions.
-- Calculating and displaying the domain and range.
-- Identifying vertical and horizontal asymptotes.
+- Displaying graph of trigonometric functions: sine, cosine, tangent, and cotangent.
+- Displaying inverses of trigonometric functions.
+- Showing the domain and range of listed trigononometric functions
+- Showing asymptotes of tangent and cotangent functions.
 
 Requirements:
 
@@ -45,5 +45,5 @@ Running the Application
 
 How to use:
 
-- Select a trigonometric function and click the "Visualize" button to display the results. (e.g., plot, find domain/range) from the dropdown menus.
+- Select a trigonometric function and click the "Visualize" button to display the results from the dropdown menu.
 
